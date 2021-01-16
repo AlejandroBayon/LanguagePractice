@@ -1,1 +1,1 @@
-{"leading": "famous, popular", "nasty": "unpleasant, disgusting", "spokesman": "representative, delegate", "plea": "an urgent and emotional request"}
+{"leading": "famous, popular", "nasty": "unpleasant, disgusting", "spokesman": "representative, delegate", "plea": "an urgent and emotional request", "abate": "to become less intense or widespread"}
