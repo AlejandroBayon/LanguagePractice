@@ -39,3 +39,8 @@ def add_from_file(Dic):
     else:
         print("\nSorry, this file doesn't exist\n")
     return Dic
+
+def show(Dic):
+    print("\nThere are " + str(len(Dic)) + " words in the database\n")
+    for word, definition in sorted(Dic.items()):
+        print(word + ": " + definition)
