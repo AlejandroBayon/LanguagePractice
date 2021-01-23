@@ -27,12 +27,15 @@ def add_single(Dic):
 def add_from_file(Dic):
     input_file = input("\nFrom which file do you want to add new words? ")
     if os.path.exists(input_file):
-        with open(input_file) as file:
-            for row in file:
-                new_row = row.strip()
-                key, value = re.split(": ", new_row)
-                Dic[key] = value
-        print("\nNew words added successfully!\n")
+        try:
+            with open(input_file) as file:
+                for row in file:
+                    new_row = row.strip()
+                    key, value = re.split(": ", new_row)
+                    Dic[key] = value
+            print("\nNew words added successfully!\n")
+        except:
+            print("\nAn error occurred, the words can't be added\n")
     else:
         print("\nSorry, this file doesn't exist\n")
     return Dic
