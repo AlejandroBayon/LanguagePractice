@@ -44,3 +44,10 @@ def show(Dic):
     print("\nThere are " + str(len(Dic)) + " words in the database\n")
     for word, definition in sorted(Dic.items()):
         print(word + ": " + definition)
+
+def clear(Dic):
+    response = input("\nAre you sure you want to empty the database? ")
+    if response == "Yes" or response == "yes":
+        Dic.clear()
+        print("\nDatabase emptied successfully")
+    return Dic
