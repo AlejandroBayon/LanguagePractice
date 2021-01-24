@@ -16,8 +16,12 @@ while executing == 1:
     print("4: empty the database")
     print("\nPlay games:")
     print("5: play to 'Spaces'")
+    print("6: play to 'Hangman'")
+    print("7: play to 'Word'")
+    print("8: play to 'Definition'")
+    print("9: play to 'Match'")
     print("\nOthers:")
-    print("6: exit")
+    print("0: exit")
 
     response = input("\n")
 
@@ -31,6 +35,14 @@ while executing == 1:
         Dic = DataBase.clear(Dic)
     elif response == "5":
         Game1_Spaces.game(Dic)
+    elif response == "6":
+        print("\nThis game will be available soon")
+    elif response == "7":
+        print("\nThis game will be available soon")
+    elif response == "8":
+        print("\nThis game will be available soon")
+    elif response == "9":
+        print("\nThis game will be available soon")
     else:
         print("\nOk, see you soon!\n")
         DataBase.close_DB(Dic)
