@@ -4,6 +4,7 @@ import DataBase
 import Game1_Spaces
 import Game3_Word
 import Game4_Definition
+import Game5_Match
 
 Dic = DataBase.open_DB()
 executing = 1
@@ -44,7 +45,7 @@ while executing == 1:
     elif response == "8":
         Game4_Definition.game(Dic)
     elif response == "9":
-        print("\nThis game will be available soon")
+        Game5_Match.game(Dic)
     else:
         print("\nOk, see you soon!\n")
         DataBase.close_DB(Dic)
