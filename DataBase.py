@@ -33,11 +33,11 @@ def add_from_file(Dic):
                     new_row = row.strip()
                     key, value = re.split(": ", new_row)
                     Dic[key] = value
-            print("\nNew words added successfully!\n")
+            print("\nNew words added successfully!")
         except:
-            print("\nAn error occurred, the words can't be added\n")
+            print("\nAn error occurred, the words can't be added")
     else:
-        print("\nSorry, this file doesn't exist\n")
+        print("\nSorry, this file doesn't exist")
     return Dic
 
 def show(Dic):
