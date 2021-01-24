@@ -3,6 +3,7 @@
 import DataBase
 import Game1_Spaces
 import Game3_Word
+import Game4_Definition
 
 Dic = DataBase.open_DB()
 executing = 1
@@ -41,7 +42,7 @@ while executing == 1:
     elif response == "7":
         Game3_Word.game(Dic)
     elif response == "8":
-        print("\nThis game will be available soon")
+        Game4_Definition.game(Dic)
     elif response == "9":
         print("\nThis game will be available soon")
     else:
