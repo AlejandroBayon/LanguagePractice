@@ -2,6 +2,7 @@
 
 import DataBase
 import Game1_Spaces
+import Game2_Hangman
 import Game3_Word
 import Game4_Definition
 import Game5_Match
@@ -11,7 +12,6 @@ executing = 1
 print("\nWelcome to LANGUAGE PRACTICE!")
 
 while executing == 1:
-    print("\nWhat do you want to do?")
     print("\nManage the database:")
     print("1: add new words one by one")
     print("2: add new words from a file")
@@ -26,7 +26,7 @@ while executing == 1:
     print("\nOthers:")
     print("0: exit")
 
-    response = input("\n")
+    response = input("\nWhat do you want to do? ")
 
     if response == "1":
         Dic = DataBase.add_single(Dic)
@@ -39,7 +39,7 @@ while executing == 1:
     elif response == "5":
         Game1_Spaces.game(Dic)
     elif response == "6":
-        print("\nThis game will be available soon")
+        Game2_Hangman.game(Dic)
     elif response == "7":
         Game3_Word.game(Dic)
     elif response == "8":
