@@ -10,13 +10,17 @@ def game(Dic):
         print("\nGuess the word with this definition: '" + definition + "'\n")
         while lifes > 0:
             guess_word = ""
+            letters_said = ""
             for letter in word:
                 if letter in user_letters:
                     guess_word = guess_word + letter + " "
                 else:
                     guess_word = guess_word + "_ "
             print(guess_word)
-            response = input("\nSay a letter or the word if you know it: ")
+            for user_letter in user_letters:
+                letters_said = letters_said + user_letter + " "
+            print("\nYou have said the following letters: " + letters_said)
+            response = input("\nSay a letter, or the word if you know it: ")
             if response == word:
                 print("\nWell done! It's correct\n")
                 break
@@ -24,6 +28,7 @@ def game(Dic):
                 print("\nThis letter has been said before")
             elif response not in word:
                 print("\nSorry, this letter isn't in the word")
+                user_letters.append(response)
                 lifes -= 1
             else:
                 print("\nWell done, this letter is in the word")
