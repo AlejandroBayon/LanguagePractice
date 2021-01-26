@@ -1,8 +1,10 @@
 import random
+import os
 
 def game(Dic):
     playing = 1
     while playing == 1:
+        os.system("cls")
         words = []
         definitions = []
 
@@ -12,7 +14,7 @@ def game(Dic):
                 words.append(word)
                 definitions.append(definition)
         
-        print("\nFor the definition '" + definitions[0] + "'\n")
+        print("For the definition '" + definitions[0] + "'\n")
         words_sorted = sorted(words)
         for number, element in enumerate(words_sorted):
             print(str(number + 1) + ": " + element)

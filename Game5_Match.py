@@ -1,8 +1,10 @@
 import random
+import os
 
 def game(Dic):
     playing = 1
     while playing == 1:
+        os.system("cls")
         words = []
         definitions = []
 
@@ -12,7 +14,7 @@ def game(Dic):
                 words.append(word)
                 definitions.append(definition)
         
-        print("\nWords:\n")
+        print("Words:\n")
         words_sorted = sorted(words)
         for number, element in enumerate(words_sorted):
             print(str(number + 1) + ": " + element)
@@ -25,9 +27,10 @@ def game(Dic):
 
         for attempt in range(3):
             score = 0
+            print()
             
             for question in range(4):
-                response = int(input("\nWhat is the correct definition for the word " + str(question + 1) + "? ")) - 1
+                response = int(input("What is the correct definition for the word " + str(question + 1) + "? ")) - 1
                 selected_word = words_sorted[question]
                 selected_definition = definitions_sorted[response]
                 if words.index(selected_word) == definitions.index(selected_definition):

@@ -6,12 +6,14 @@ import Game2_Hangman
 import Game3_Word
 import Game4_Definition
 import Game5_Match
+import os
 
 Dic = DataBase.open_DB()
 executing = 1
-print("\nWelcome to LANGUAGE PRACTICE!")
 
 while executing == 1:
+    os.system("cls")
+    print("Welcome to LANGUAGE PRACTICE!")
     print("\nManage the database:")
     print("1: add new words one by one")
     print("2: add new words from a file")

@@ -1,14 +1,16 @@
 import random
+import os
 
 def game(Dic):
     playing = 1
     while playing == 1:
+        os.system("cls")
         word, definition = random.choice(list(Dic.items()))
         first_letter = word[0]
         spaces = len(word) - 2
         last_letter = word[-1]
 
-        print("\nThe word definition is: '" + definition + "'\n")
+        print("The word definition is: '" + definition + "'\n")
         print(first_letter + " " + "_ " * spaces + last_letter)
 
         for attempt in range(3):
